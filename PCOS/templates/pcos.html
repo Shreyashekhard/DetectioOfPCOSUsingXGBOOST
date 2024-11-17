@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="pcos">
+    <div class="container">
+        <h2>PCOS Detection Form</h2>
+        <form id="pcosForm" action="/predict" method="POST">
+            <label for="Age (yrs)">Age (yrs):</label>
+            <input type="number" id="Age (yrs)" name="Age (yrs)" required>
+            <label for="Weight (Kg)">Weight (Kg):</label>
+            <input type="number" id="Weight (Kg)" name="Weight (Kg)" required>
+            <label for="Height(Cm) ">Height(Cm):</label>
+            <input type="number" id="Height(Cm) " name="Height(Cm) " required>
+            <label for="BMI">BMI (body mass index):</label>
+            <input type="number" id="BMI" name="BMI" required>
+            <label for="Pulse rate(bpm) ">Pulse rate(bpm) </label>
+            <input type="number" id="Pulse rate(bpm) " name="Pulse rate(bpm) " required>
+            <label for="Cycle(R/I)">Cycle(R/I):</label>
+            <input type="number" id="Cycle(R/I)" name="Cycle" required>
+            <label for="Cycle length(days)">Cycle length(days)(Regular-0/Irregular-1):</label>
+            <input type="number" id="Cycle length(days)" name="Cycle length(days)" required>
+            <label for="Marraige Status (Yrs)">Marraige Status (Yrs):</label>
+            <input type="number" id="Marraige Status (Yrs)" name="Marraige Status (Yrs)" required>
+            <label for="  I   beta-HCG(mIU/mL)">I beta-HCG(mIU/mL)[beta-human chronic gonadotropins]:</label>
+            <input type="number" id="  I   beta-HCG(mIU/mL)" name="  I   beta-HCG(mIU/mL)" required>
+            <label for="FSH(mIU/mL)">FSH(mIU/mL)[follicle-simulating hormone]:</label>
+            <input type="number" id="FSH(mIU/mL)" name="FSH(mIU/mL)" required>
+            <label for="LH(mIU/mL)">LH(mIU/mL)[luteinzing hormone]:</label>
+            <input type="number" id="LH(mIU/mL)" name="LH(mIU/mL)" required>
+            <label for="FSH/LH">FSH/LH]:</label>
+            <input type="number" id="FSH/LH" name="FSH/LH" required>
+            <label for="Hip(inch)">Hip(inch):</label>
+            <input type="number" id="Hip(inch)" name="Hip(inch)" required>
+            <label for="Waist(inch)">Waist(inch):</label>
+            <input type="number" id="Waist(inch)" name="Waist(inch)" required>
+            <label for="Waist:Hip Ratio">Waist:Hip Ratio:</label>
+            <input type="number" id="Waist:Hip Ratio" name="Waist:Hip Ratio" required>
+            <label for="TSH (mIU/L)">TSH (mIU/L)[thyroid stimulating hormone]:</label>
+            <input type="number" id="TSH (mIU/L)" name="TSH (mIU/L)" required>
+            <label for="AMH(ng/mL)">AMH(ng/mL)[anti mulerian hormone]:</label>
+            <input type="number" id="AMH(ng/mL)" name="AMH(ng/mL)" required>
+            <label for="PRL(ng/mL)">PRL(ng/mL)[deafault-0]:</label>
+            <input type="number" id="PRL(ng/mL)" name="PRL(ng/mL)" required>
+            <label for="Vit D3 (ng/mL)">Vit D3 (ng/mL):</label>
+            <input type="number" id="Vit D3 (ng/mL)" name="Vit D3 (ng/mL)" required>
+            <label for="PRG(ng/mL)">PRG(ng/mL)[patient reference group]:</label>
+            <input type="number" id="PRG(ng/mL)" name="PRG(ng/mL)" required>
+            <label for="RBS(mg/dl)">RBS(mg/dl)[random blood sugar]:</label>
+            <input type="number" id="RBS(mg/dl)" name="RBS(mg/dl)" required>
+            <label for="Weight gain(Y/N)">Weight gain(Y/N):</label>
+            <input type="number" id="Weight gain(Y/N)" name="Weight gain(Y/N)" required>
+            <label for="hair growth(Y/N)">hair growth(Y/N):</label>
+            <input type="number" id="hair growth(Y/N)" name="hair growth(Y/N)" required>
+            <label for="Skin darkening (Y/N)">Skin darkening (Y/N):</label>
+            <input type="number" id="Skin darkening (Y/N)" name="Skin darkening (Y/N)" required>
+            <label for="Fast food (Y/N)">Fast food (Y/N):</label>
+            <input type="number" id="Fast food (Y/N)" name="Fast food (Y/N)" required>
+            <label for="Follicle No. (L)">Follicle No. (L):</label>
+            <input type="number" id="Follicle No. (L)" name="Follicle No. (L)" required>
+            <label for="Follicle No. (R)">Follicle No. (R):</label>
+            <input type="number" id="Follicle No. (R)" name="Follicle No. (R)" required>
+            <label for="Avg. F size (L) (mm)">Avg. F size (L) (mm):</label>
+            <input type="number" id="Avg. F size (L) (mm)" name="Avg. F size (L) (mm)" required>
+            <label for="Avg. F size (R) (mm)">Avg. F size (R) (mm):</label>
+            <input type="number" id="Avg. F size (R) (mm)" name="Avg. F size (R) (mm)" required>
+            <label for="Endometrium (mm)">Endometrium (mm):</label>
+            <input type="number" id="Endometrium (mm)" name="Endometrium (mm)" required>
+            <button type="submit">Predict PCOS</button>
+        </form>
+        <div id="predictionResult"></div>
+    </div>
+    </div>
+</body>
+</html>
